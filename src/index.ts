@@ -1,12 +1,9 @@
 //THIS IS THE ENTRY FILE - WRITE YOUR MAIN LOGIC HERE!
 
-import { helloWorld, Beispiel } from "./myModule";
+import "./myModule";
 import { alertMe } from "./myOtherModule";
+import "./playbutton";
 
-console.log(helloWorld);
-customElements.define("my-beispiel", Beispiel);
-
-alertMe();
 
 const myInputValue = document.querySelector<HTMLInputElement>("#myInput");
 
@@ -22,3 +19,5 @@ function doSmth(e: UIEvent) {
   const val = e.target as HTMLInputElement;
   console.log(e, val.value);
 }
+
+document.querySelector("testbutton")?.addEventListener
