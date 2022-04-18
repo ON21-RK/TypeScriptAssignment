@@ -1,25 +1,33 @@
-import "./myModule"
 class PlayButton extends HTMLElement {
-    private button?: HTMLElement
+    private button?: HTMLButtonElement
+
+    private startGameHandler: (event: UIEvent) => void
+
     constructor() {
         super()
+        this.render()
+        this.startGameHandler = this.startGame.bind(this)
     }
+
     connectedCallback() {
-        this.button = document.createElement("div")
-        this.button.id = "playButton"
-        this.button.textContent = "Play Game"
-        this.button.addEventListener('click', this.startGame)
+        this.button = this.querySelector('#play-button')!
+        this.button.addEventListener('click', this.startGameHandler)
+    }
 
-        const hello = document.createElement("hello-world")
+    disconnectedCallback() {
+        this.button?.removeEventListener('click', this.startGameHandler)
+    }
+    
+    startGame(event: UIEvent) {
+        const gameStartedEvent = new CustomEvent('game-started', {})
+        document.dispatchEvent(gameStartedEvent)
+    }
 
-        //this.append(this.button)
-        this.append(hello)
-    }
-    disConnectedCallback() {
-        this.button?.removeEventListener('click', this.startGame)
-    }
-    public startGame() {
-       alert("Game Started...")
-    }
+    render() {
+       this.innerHTML = `
+        <button id="play-button">Play Button</button>
+       `
+    }   
 }
-customElements.define("play-button", PlayButton)
+
+customElements.define('play-button', PlayButton)
