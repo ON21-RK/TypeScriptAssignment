@@ -1,6 +1,5 @@
 import "./PlayButton"
 import "./GameView"
-import "./Game"
 import Store from './lib/Store'
 import "./EmojiGame"
 
