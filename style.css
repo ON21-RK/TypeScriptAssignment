@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
 body {
-    background-color: #b8c6db;
+    background-color: white;
     font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
@@ -23,9 +23,56 @@ body.start {
     background-image: linear-gradient(315deg, #43CBFF 0%, #9708CC 100%);
 }
 
-#headlineContainer {
-    color: white;
+body.container {
+    background-color: #fff;
+}
+
+h1 {
     font-size: 40px;
+    color: white;
+}
+
+#question-text {
+    font-size: 50px;
+}
+
+#play-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    border-radius: 10px;
+    width: 450px;
+    height: 80px;
+  }
+
+#guess-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width: 120px;
+    height: 35px;
+    background-color: #fccf31;
+    position: relative;
+    border: 3px solid #fccf31;
+    border-radius: 22px;
+    transition: all .3s cubic-bezier(.13,.71,.57,1.29);
+    cursor: pointer;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 3px solid #fccf31;  
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    width: 200px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+#headlineContainer {
     font-weight: 500;
     text-align: center;
     padding-bottom: 20px;
@@ -39,42 +86,20 @@ body.start {
     padding-bottom: 20px;
 }
 
-#headlineContainer {
-    color: white;
-    font-size: 40px;
-    font-weight: 500;
-    text-align: center;
-    padding-bottom: 20px;
-}
-
 #emojiContainer {
-    background-color: #fff;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10% 2px rgba (100, 100, 100, 0.1);
     width: 600px;
-    height: 300px;
+    height: 400px;
     overflow: hidden;
     text-align: center;
     margin-bottom: 30px;
 }
 
-#antwortContainer {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10% 2px rgba (100, 100, 100, 0.1);
-    width: 600px;
-    height: 200px;
-    overflow: hidden;
-    text-align: center;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-
 #startContainer {
-    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10% 2px rgba (100, 100, 100, 0.1);
+ 
     width: 450px;
     height: 80px;
     display: table;

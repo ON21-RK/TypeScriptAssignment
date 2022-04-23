@@ -5,7 +5,7 @@ import {EmojiGame} from "./EmojiGame"
 class GameView extends HTMLElement {
 
     private game: EmojiGame = new EmojiGame()
-
+    private body?: HTMLBodyElement
     constructor() {
         super()
         this.game.start()
@@ -23,6 +23,7 @@ class GameView extends HTMLElement {
 
     public isGameInProgress() {
         return this.game.isInProgress()
+        
     }
 
 
@@ -30,14 +31,29 @@ class GameView extends HTMLElement {
     render() {
        const question = this.game.getCurrentQuestion() 
        this.innerHTML = `
-        <div>
-            <h1>Game in progress</h1>
+        
+       <body class ="quiz">
+       <div>
+            
+        </div>
+
+        <div class="container">  
+        
+        <div id="headlineContainer">
+            <h1>Emoji-Quiz</h1>
+        </div>
+
+        <div id="emojiContainer">
+            <h2>Welcher Titel wird gesucht?</h2>
+            <p>Setze die Emojis zusammen und gebe deine Antwort ein.</p>
             ${this.isGameInProgress() ? `
                 <question-component question-text="${question.question}"></question-component>
 
             ` : `<highscore-component score="${this.game.score()}"></highscore-component>`}
-    
         </div>
+
+    </div>
+        </body>
        `
     }   
 }
@@ -93,8 +109,8 @@ class QuestionComponent extends HTMLElement {
         <div>
             <h3 id="question-text">${this.questionText}</h3>
             <div>
-                <input type="text" id="guess-input" placeholder="Your Answer" />
-                <button id="guess-button">Guess</button>
+                <input type="text" id="guess-input" placeholder="Deine Antwort:" /><br>
+                <button id="guess-button">Absenden</button>
             </div>
         </div>
         `
