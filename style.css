@@ -68,8 +68,6 @@ input[type=text] {
     text-align: center;
     align-items: center;
     justify-content: center;
-    
-
 }
 
 #headlineContainer {
@@ -99,7 +97,6 @@ input[type=text] {
 
 #startContainer {
     border-radius: 10px;
- 
     width: 450px;
     height: 80px;
     display: table;

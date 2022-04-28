@@ -18,12 +18,10 @@ class PlayButton extends HTMLElement {
     }
 
     disconnectedCallback() {
-        
         this.button?.removeEventListener('click', this.startGameHandler)
     }
     
     startGame(event: UIEvent) {
-        
         const gameStartedEvent = new CustomEvent('game-started', {})
         document.dispatchEvent(gameStartedEvent)
     }
@@ -49,9 +47,6 @@ class PlayButton extends HTMLElement {
             <h2>Highscore</h2>
         </div>
     </div>
-
-
-
 </body>
        `
     }   
