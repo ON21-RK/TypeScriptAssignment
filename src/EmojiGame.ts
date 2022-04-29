@@ -78,7 +78,7 @@ export class EmojiGame {
         new Question("😱 🎬", "Scary Movie"),
         new Question("🧽 ⭐️ 🐟 🐡 🍔 🐌", "Spongebob Schwammkopf"),
         new Question("👸🏻 👑 ☠️ 🔥 ❄️", "Game of Thrones"),
-        new Question("⚗️ 💰 🔫 👨🏻 👮🏼‍♂️ 🧪",	"Breaking Bad"),
+        new Question("⚗️ 💰 🔫 👨🏻 👮🏼‍♂️ 🧪","Breaking Bad"),
         new Question("👩‍❤️‍👨 💉 🏥 👩‍⚕️ 🧑‍⚕️", "Grey’s Anatomy"),
     ]
 

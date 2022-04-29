@@ -45,6 +45,15 @@ h1 {
     height: 80px;
   }
 
+#highscore-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    border-radius: 10px;
+    width: 450px;
+    height: 80px;
+  }
+
 #guess-button {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;

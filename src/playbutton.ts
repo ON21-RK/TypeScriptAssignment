@@ -44,7 +44,7 @@ class PlayButton extends HTMLElement {
         </div>
 
         <div id="highscoreContainer">
-            <h2>Highscore</h2>
+            <button id="highscore-button">Highscore</button>
         </div>
     </div>
 </body>
