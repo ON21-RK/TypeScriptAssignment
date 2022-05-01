@@ -23,6 +23,7 @@ export class EmojiGame {
         new Question("👨 👨 👦", "Two and a half Men"),
         new Question("👨 💡 🧷 💣", "Mac Gyver"),
         new Question("👪 👽 🐈 🏠",	"Alf"),
+        /*
         new Question("👨 👨 👦", "Two And A Half Men"),
         new Question("🕵 👩 📂 🔦 👽", "Akte X"),
         new Question("👩 👩 🌆 🍰 💵", "Two Broke Girls"),
@@ -80,6 +81,7 @@ export class EmojiGame {
         new Question("👸🏻 👑 ☠️ 🔥 ❄️", "Game of Thrones"),
         new Question("⚗️ 💰 🔫 👨🏻 👮🏼‍♂️ 🧪","Breaking Bad"),
         new Question("👩‍❤️‍👨 💉 🏥 👩‍⚕️ 🧑‍⚕️", "Grey’s Anatomy"),
+        */
     ]
 
     public start() {

@@ -1,7 +1,6 @@
-import "./PlayButton"
 import "./GameView"
-import Store from './lib/Store'
 import "./EmojiGame"
+import "./Playbutton"
 
 class App extends HTMLElement {
     private gameInProgress = false
@@ -24,7 +23,6 @@ class App extends HTMLElement {
          })
     }
     
-    /* make a function that renders html to shadow dom */
     render() {
         this.innerHTML = `
         <div>

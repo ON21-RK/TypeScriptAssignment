@@ -1,6 +1,5 @@
-import "./PlayButton"
 import {EmojiGame} from "./EmojiGame"
-
+import {Highscore, Score} from "./Score"
 
 class GameView extends HTMLElement {
 
@@ -59,13 +58,47 @@ class GameView extends HTMLElement {
 }
 
 class HighscoreComponent extends HTMLElement {
+    private highscore: Highscore
+
     constructor() {
         super()
         this.render()
+        this.highscore = []
+        // read highscore from local storage
+        const storedHighscore = localStorage.getItem('highscore')
+        if (storedHighscore) {
+            try {
+                const result = JSON.parse(storedHighscore)
+                if(Array.isArray(result)) {
+                    let newScore: Score = {
+                        score: this.score,
+                        date: new Date()
+                    }
+                    this.highscore = result.concat(newScore)
+                    localStorage.setItem('highscore', JSON.stringify(this.highscore))
+                }
+            } catch(e) {
+                this.highscore = []   
+                localStorage.setItem('highscore', JSON.stringify(this.highscore))
+            }
+        } else {
+            let newScore: Score = {
+                score: this.score,
+                date: new Date()
+            }
+            this.highscore = [newScore]
+            localStorage.setItem('highscore', JSON.stringify(this.highscore))
+        }
     }
 
     get score() {
-        return this.getAttribute('score')
+        var scoreString = this.getAttribute('score') || ""
+        var parsedScore = parseInt(scoreString, 10)
+        if(!Number.isNaN(parsedScore)) {
+            return parsedScore
+        } else {
+            return 0
+        }
     }
 
     render() {
