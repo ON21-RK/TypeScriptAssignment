@@ -12,13 +12,11 @@ class App extends HTMLElement {
     connectedCallback() {
         document.addEventListener("game-started", () => {
            this.gameInProgress = true
-           console.log("game started")
            this.render()
         })
 
         document.addEventListener("game-stopped", () => {
             this.gameInProgress = false
-             console.log("game started")
             this.render()
          })
     }

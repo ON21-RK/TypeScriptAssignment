@@ -1,23 +1,8 @@
-
-class Question {
-    private givenAnswer: string = ""
-    questionText: any
-    constructor(public question: string, private correctAnswer: string) {}
-
-    public guess(input: string): boolean {
-        this.givenAnswer = input
-        return this.correctAnswer === this.givenAnswer
-    }
-
-    public isCorrect(): boolean {
-        return this.correctAnswer === this.givenAnswer
-    }
-}
+import { Question } from "./question"
 
 export class EmojiGame {
-    private inProgress: boolean = false
-    private currentQuestionIndex: number = 0
-    private body?: HTMLBodyElement
+    private inProgress = false
+    private currentQuestionIndex = 0
 
     private questions: Question[] = [
         new Question("👨 👨 👦", "Two and a half Men"),
@@ -105,9 +90,9 @@ export class EmojiGame {
     }
 
     public isInProgress() {
-        this.body = document.querySelector('body')!
-        this.body.classList.remove('start')
-        this.body.classList.add('quiz')
+        const body = document.querySelector('body')!
+        body.classList.remove('start')
+        body.classList.add('quiz')
         return this.inProgress
     }
 

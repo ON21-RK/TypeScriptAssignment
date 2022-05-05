@@ -1,9 +1,6 @@
-import { Highscore } from "./Score"
+import { Highscore } from "./score"
 
 export class HighscoreView extends HTMLElement {
-    private button?: HTMLButtonElement
-    private body?: HTMLBodyElement
-
     private highscore: Highscore = []
 
     constructor() {
@@ -24,17 +21,8 @@ export class HighscoreView extends HTMLElement {
     }
 
     connectedCallback() {
-        this.body = document.querySelector('body')!
-        this.body.classList.add('highscore')
-        this.button = this.querySelector('#highscore-button')!
-    }
-
-    disconnectedCallback() {
-    }
-    
-    startGame(event: UIEvent) {
-        const gameStartedEvent = new CustomEvent('highscore-started', {})
-        document.dispatchEvent(gameStartedEvent)
+        const body = document.querySelector('body')!
+        body.classList.add('highscore')
     }
 
     get scoreByPoints() {
@@ -44,8 +32,6 @@ export class HighscoreView extends HTMLElement {
     }
 
     render() {
-        console.log(this.highscore)
-        console.log(this.scoreByPoints)
        this.innerHTML = `
        <div class="container">  
            <div id="headlineContainer">
