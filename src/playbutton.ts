@@ -1,4 +1,4 @@
-class PlayButton extends HTMLElement {
+class Playbutton extends HTMLElement {
     private button?: HTMLButtonElement
 
     private startGameHandler: (event: UIEvent) => void
@@ -47,4 +47,4 @@ class PlayButton extends HTMLElement {
     }   
 }
 
-customElements.define('play-button', PlayButton)
+customElements.define('play-button', Playbutton)
