@@ -40,14 +40,18 @@ export class HighscoreView extends HTMLElement {
            </div>
            ${this.scoreByPoints.map((score, index) => {
                return `
-                <div class="rank"> 
+                <div class="rank">
                     <h3>${index + 1}. Platz: </h3>
                     <p>Du hast ${score.score} Titel richtig erraten</p>
                 </div>
-               `
+                `
            })}
+           
        </div>
+       <a href="/index.html" id="startseite-button">Zurück zur Startseite</a>
        `
+       
+
     }   
 }
 

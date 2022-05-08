@@ -8,7 +8,6 @@ export class EmojiGame {
         new Question("👨 👨 👦", "Two and a half Men"),
         new Question("👨 💡 🧷 💣", "Mac Gyver"),
         new Question("👪 👽 🐈 🏠",	"Alf"),
-        /*
         new Question("👨 👨 👦", "Two And A Half Men"),
         new Question("🕵 👩 📂 🔦 👽", "Akte X"),
         new Question("👩 👩 🌆 🍰 💵", "Two Broke Girls"),
@@ -27,25 +26,25 @@ export class EmojiGame {
         new Question("👦🏻 👓 ⚡️", "Harry Potter"),
         new Question("🔫 🍸 👙 🤵🏻‍♂️", "James Bond"),
         new Question("🚀 ✨ 💁🏻‍♀️ 🌍", "Gravity"),
-        new Question("🏴‍☠️ ⚓️ 💰 ☠️",	"Fluch der Karibik"),
+        new Question("🏴‍☠️ ⚓️ 💰 ☠️", "Fluch der Karibik"),
         new Question("🏡 🎈 🎈", "Oben"),
         new Question("👦🏻 🏭 🍫", "Charlie und die Schokoladenfabrik"),
-        new Question("🧙‍♀️ 📖",	"Die kleine Hexe"),
+        new Question("🧙‍♀️ 📖", "Die kleine Hexe"),
         new Question("👩🏼‍🦰 🏠 🐒 🐴", "Pipi Langstrumpf"),
         new Question("🔎 🐠", "Findet Nemo"),
         new Question("❄️ ☃️ 👸🏻", "Die Eiskönigin"),
         new Question("1️⃣ 🦄", "Das letzte Einhorn"),
         new Question("🍎 👸🏻", "Schneewittchen"),
         new Question("👦🏻 👧🏻 🌂 👜",	"Mary Poppins"),
-        new Question("🐭 🚗",	"Stuart Little"),
+        new Question("🐭 🚗", "Stuart Little"),
         new Question("👧🏼 🐱 🎩 🐇 ❤️ ♣️",	"Alice im Wunderland"),
         new Question("🏎 🏎 🏎 🏁", "Cars"),
         new Question("👦🏼 🕵️‍♂️ 🕵️ 🕵️‍♀️", "Emil und die Detektive"),
         new Question("✈️ 🏫 👨‍🏫", "Das fliegende Klassenzimmer"),
         new Question("👧🏻 👦🏼 👦🏼 👴🏼 🏔", "Heidi"),
-        new Question("🤖 🚀 🌱",	"Wall-E"),
+        new Question("🤖 🚀 🌱", "Wall-E"),
         new Question("👦🏿 🧔🏻‍♂️ 🚂", "Jim Knopf"),
-        new Question("🧜🏼‍♀️ 🤴🏼",	"Arielle die Meerjungfrau"),
+        new Question("🧜🏼‍♀️ 🤴🏼", "Arielle die Meerjungfrau"),
         new Question("👹 👗 👠", "Der Teufel trägt Prada"),
         new Question("🇺🇸 🥧", "American Pie"),
         new Question("🎈 🤡", "ES"),
@@ -53,7 +52,7 @@ export class EmojiGame {
         new Question("🐺 🏦 💰 🍾", "The Wolf of Wallstreet"),
         new Question("🐀 🍝", "Ratatouille"),
         new Question("🚫 👂 🐇", "KeinOhrHasen"),
-        new Question("5️⃣0️⃣0️⃣ ☀️",	"500 Days of Summer"),
+        new Question("5️⃣0️⃣0️⃣ ☀️", "500 Days of Summer"),
         new Question("🐺 🕺🏼", "Der mit dem Wolf tanzt"),
         new Question("🧔🏻‍♂️ 💍 🌋", "Herr der Ringe"),
         new Question("🐴 🐴 🤫", "Der Pferdeflüsterer"),
@@ -66,8 +65,23 @@ export class EmojiGame {
         new Question("👸🏻 👑 ☠️ 🔥 ❄️", "Game of Thrones"),
         new Question("⚗️ 💰 🔫 👨🏻 👮🏼‍♂️ 🧪","Breaking Bad"),
         new Question("👩‍❤️‍👨 💉 🏥 👩‍⚕️ 🧑‍⚕️", "Grey’s Anatomy"),
-        */
+        
     ]
+
+    /*private chooseRandom = (Question: string | any[], num = 1) => {
+        const res = [];
+        for(let i = 0; i < num; ){
+            const random = Math.floor(Math.random() * Question.length);
+            if (res.indexOf(Question[random]) !== -1){
+                continue;
+            };
+            res.push(Question[random]);
+            i++;
+        };
+        return res;
+        
+    };
+    */
 
     public start() {
         this.inProgress = true

@@ -37,6 +37,9 @@ class GameView extends HTMLElement {
                     <question-component question-text="${question.question}"></question-component>
                 ` : `<highscore-component score="${this.game.score()}"></highscore-component>`}
             </div>
+            <div id="highscoreContainer">
+            <a href="/highscore.html" id="highscore-button">Zu deinen Highscores</a>
+        </div>
         </div>
         </body>
        `

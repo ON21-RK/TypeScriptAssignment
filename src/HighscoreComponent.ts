@@ -46,7 +46,7 @@ export class HighscoreComponent extends HTMLElement {
 
     render() {
         this.innerHTML = `
-        <div>Your score is ${this.score}</div>
+        <div id = "richtigeAntworten">Du hast ${this.score} Antworten richtig</div>
         `
     }
 }
