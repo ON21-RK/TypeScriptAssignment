@@ -45,7 +45,7 @@ export class HighscoreView extends HTMLElement {
                     <p>Du hast ${score.score} Titel richtig erraten</p>
                 </div>
                 `
-           })}
+           }).join("")}
            
        </div>
        <a href="/index.html" id="startseite-button">Zurück zur Startseite</a>

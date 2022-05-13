@@ -70,8 +70,10 @@ highscore-view {
     align-items: center;
 }
 
-container {
+.container {
     justify-items: center;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -101,7 +103,12 @@ container {
     align-items: center;
     text-align: center;
     justify-content: center;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
 }
+
+
 
 #guess-button {
     font-family: 'Poppins', sans-serif;

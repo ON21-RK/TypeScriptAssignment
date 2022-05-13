@@ -1,11 +1,6 @@
 import { Question } from "./question"
-
-export class EmojiGame {
-    private inProgress = false
-    private currentQuestionIndex = 0
-
-    private questions: Question[] = [
-        new Question("👨 👨 👦", "Two and a half Men"),
+const allQuestions: Question[] = [
+    new Question("👨 👨 👦", "Two and a half Men"),
         new Question("👨 💡 🧷 💣", "Mac Gyver"),
         new Question("👪 👽 🐈 🏠",	"Alf"),
         new Question("👨 👨 👦", "Two And A Half Men"),
@@ -65,23 +60,26 @@ export class EmojiGame {
         new Question("👸🏻 👑 ☠️ 🔥 ❄️", "Game of Thrones"),
         new Question("⚗️ 💰 🔫 👨🏻 👮🏼‍♂️ 🧪","Breaking Bad"),
         new Question("👩‍❤️‍👨 💉 🏥 👩‍⚕️ 🧑‍⚕️", "Grey’s Anatomy"),
-        
-    ]
+] 
 
-    /*private chooseRandom = (Question: string | any[], num = 1) => {
-        const res = [];
-        for(let i = 0; i < num; ){
-            const random = Math.floor(Math.random() * Question.length);
-            if (res.indexOf(Question[random]) !== -1){
-                continue;
-            };
-            res.push(Question[random]);
-            i++;
+const chooseRandom = (questions: Question[], num = 10) => {
+    const res = [];
+    for(let i = 1; i < num; ){
+        const random = Math.floor(Math.random() * questions.length);
+        if (res.indexOf(questions[random]) !== -1){
+            continue;
         };
-        return res;
-        
+        res.push(questions[random]);
+        i++;
     };
-    */
+    return res;
+};
+
+export class EmojiGame {
+    private inProgress = false
+    private currentQuestionIndex = 0
+
+    private questions: Question[] = chooseRandom(allQuestions, 10)
 
     public start() {
         this.inProgress = true
